@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>the minimum and maximum number is: </p>
+<p id="a"></p>
+<script type="text/javascript">
+	function min_max(a,b)
+	{	
+		var i;	
+		var x=new Array(2);
+		x[0]=a;
+		x[1]=0;
+		for (i=0;i<b.length;i++)
+		{
+			if(b[i]<x[0])
+			{
+				x[0]=b[i];
+			}
+			if(b[i]>x[1])
+			{
+				x[1]=b[i];
+			}				
+		}
+		return x;
+	}
+	var b=new Array(3);
+	b[0]=5;
+	b[1]=8;
+	b[2]=17;
+	b[3]=43;
+	document.getElementById("a").innerHTML=min_max(100,b);
+</script>
+</body>
+</html>
